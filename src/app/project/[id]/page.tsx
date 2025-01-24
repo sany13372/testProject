@@ -6,13 +6,18 @@ import { useForm } from "react-hook-form";
 import {useRouter} from "next/navigation";
 import styles from "./ProjectPage.module.scss";
 import { useProjectStore } from "@/store/store";
-import LoadingMessage from "@/UI/LoadingMessage";
 import {ProjectInfo} from "@/UI/ProjectInfo";
 import {FormInputType, IFormFields, IProject} from "@/store/types";
 import {FormUpdateProject} from "@/UI/FormUpdateProject";
+import dynamic from "next/dynamic";
+import LoadingSpinner from "@/UI/LoadingSpinner";
 
 const { Title } = Typography;
 
+const DynamicLoadingMessage = dynamic(() => import("@/UI/LoadingMessage"), {
+    ssr: false,
+    loading: () => <LoadingSpinner />,
+});
 
 const formFields:IFormFields[] = [
     { name: "title", placeholder: "Введите название проекта", type: "text", label: "Название" },
@@ -90,7 +95,7 @@ const ProjectPage = ({ params: paramsPromise }: { params: Promise<{ id: string }
     };
 
     if (!projects || !params || !project) {
-        return <LoadingMessage isLoading={true} message={getLoadingMessage()} />;
+        return <DynamicLoadingMessage isLoading={true} message={getLoadingMessage()} />;
     }
 
     return (
