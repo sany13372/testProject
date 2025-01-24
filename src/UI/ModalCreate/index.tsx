@@ -67,7 +67,7 @@ const ModalCreate: FC = () => {
         const newProject = {
             ...data,
             id,
-            price: data.price || 0,
+            price: Number(String(data.price).trim()) || 0,
             socialLink: data.socialLink?.trim() || "",
         };
         const updatedProjects = [...projects, newProject];
