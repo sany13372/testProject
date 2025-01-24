@@ -5,7 +5,7 @@
 
 ```bash
 yarn
-# or
+
 yarn dev
 ```
 
