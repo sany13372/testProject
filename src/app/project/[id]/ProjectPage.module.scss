@@ -1,0 +1,22 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.4rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+
+

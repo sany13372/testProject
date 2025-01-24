@@ -1,0 +1,23 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > div:nth-child(1){
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    > h2{
+      margin-bottom: 0.6rem;
+    }
+  }
+  > section:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+}

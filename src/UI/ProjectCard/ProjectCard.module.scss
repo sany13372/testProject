@@ -1,0 +1,61 @@
+.card {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    .title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      color: #555;
+
+      a {
+        color: #1677ff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .priceWrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .priceIcon {
+        color: #52c41a;
+        font-size: 1.2rem;
+      }
+
+      .priceText {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .socialLink {
+      font-weight: bold;
+      padding: 0;
+      color: #1677ff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

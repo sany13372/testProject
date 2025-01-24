@@ -1,0 +1,21 @@
+.projectInfo {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.infoRow{
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  @media (max-width: 600px) {
+    justify-content: center !important;
+  }
+}

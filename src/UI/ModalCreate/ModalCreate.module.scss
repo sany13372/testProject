@@ -1,0 +1,18 @@
+.footer{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  > div{
+    display: flex;
+    gap: 0.8rem;
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
